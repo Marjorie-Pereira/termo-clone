@@ -1,0 +1,148 @@
+/* .tentativas {
+    margin: auto;
+    width: 50%;
+    background-color: grey;
+    text-align: center;
+}
+/* table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+} */
+
+/* .linhas {
+    margin: -12px auto;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+.colunas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.colunas p {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    border-radius: 8px;
+} */
+body {
+    background-color: rgb(143, 101, 101);
+    font-family: 'Mulish', sans-serif, 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+h1{
+
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: rgb(43, 39, 39);
+}
+.container {
+    width: 50%;
+    margin: auto;
+    margin-top: -10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* .tentativas {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: repeat(6, 52px);
+    grid-gap: 4px;
+}
+.tentativas div {
+    background-color: rgb(122, 89, 89);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2rem;
+} */
+
+
+.primeira-linha {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: 52px;
+    grid-gap: 4px;
+    margin-bottom: 4px;
+}
+.segunda-linha {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: 52px;
+    grid-gap: 4px;
+    margin-bottom: 4px;
+
+}
+.letra {
+    background-color: rgb(122, 89, 89);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+#linha-selecionada {
+    box-sizing: border-box;
+    background-color:rgb(143, 101, 101);
+    border: 4px solid rgb(122, 89, 89);
+    border-bottom: 7px solid rgb(122, 89, 89);
+}
+#letra-certa {
+    background-color: rgb(48, 168, 132);
+}
+#posicao-errada {
+    background-color: rgb(236, 187, 80);
+}
+#letra-errada {
+    background-color: rgb(66, 50, 50);
+}
+
+/* .teclado {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: 50px;
+    grid-auto-flow: column;
+    grid-gap: 0.3rem;
+    
+} */
+/* .teclas {
+    background-color: rgb(85, 63, 63);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.teclado {
+    box-sizing: border-box;
+    background-color: rgb(85, 63, 63);
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.teclado table, tr, td {
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 4px solid rgb(143, 101, 101);
+    padding: 10px 20px;
+}
