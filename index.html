@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <title>Termo clone</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>"termo"</title>
 </head>
 <body>
     <div class="container">
         <h1>TERMO</h1>
         <p>Baseado no jogo <a href="https://term.ooo/sobre/" target="_blank">TERMO</a> para fins de estudo.</p>
+        <p id="alerta">A palavra deve ter 5 letras!</p>
 
         <div class="tentativas">
             <div class="primeira-linha">
-                <div id="linha-selecionada" class="letra">T</div>
-                <div id="linha-selecionada" class="letra">E</div>
-                <div id="linha-selecionada" class="letra">R</div>
-                <div id="linha-selecionada" class="letra">M</div>
-                <div id="linha-selecionada" class="letra">O</div>
+                <div id="linha-selecionada" class="letra"></div>
+                <div id="linha-selecionada" class="letra"></div>
+                <div id="linha-selecionada" class="letra"></div>
+                <div id="linha-selecionada" class="letra"></div>
+                <div id="linha-selecionada" class="letra"></div>
             </div>
 
             <div class="segunda-linha">
@@ -94,6 +95,10 @@
             <div></div> -->
             
         </div>
+
+        <input type="text" id="userInput" minlneght="5" maxlength="5" required>
+
+
         <div class="teclado">
             <table>
                 <tr>
