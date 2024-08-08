@@ -7,24 +7,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <title>"termo"</title>
+    <title>termoTeste</title>
 </head>
 <body>
     <div class="container">
-        <h1>TERMO</h1>
+        <h1>DECIFRA</h1>
         <p>Baseado no jogo <a href="https://term.ooo/sobre/" target="_blank">TERMO</a> para fins de estudo.</p>
         <p id="alerta">A palavra deve ter 5 letras!</p>
+        <input type="text" id="userInput" minlength="5" maxlength="5" required  autocomplete="off">
 
-        <div class="tentativas">
-            <div class="primeira-linha">
-                <div id="linha-selecionada" class="letra"></div>
-                <div id="linha-selecionada" class="letra"></div>
-                <div id="linha-selecionada" class="letra"></div>
-                <div id="linha-selecionada" class="letra"></div>
-                <div id="linha-selecionada" class="letra"></div>
+        <div class="tentativas" id="tentativas">
+            <div class="linha linha-selecionada" id="linha-selecionada">
+                <div id="letra-selecionada" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
             </div>
 
-            <div class="segunda-linha">
+            <div class="linha">
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+            </div>
+
+            <div class="linha">
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+            </div>
+
+            <div class="linha">
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+            </div>
+
+            <div class="linha">
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+                <div id="" class="letra"></div>
+            </div>
+
+            <div class="linha">
                 <div id="" class="letra"></div>
                 <div id="" class="letra"></div>
                 <div id="" class="letra"></div>
@@ -32,112 +65,53 @@
                 <div id="" class="letra"></div>
             </div>
             
-            <div class="segunda-linha">
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-            </div>
-
-            <div class="segunda-linha">
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-            </div>
-
-            <div class="segunda-linha">
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-            </div>
-
-            <div class="segunda-linha">
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-                <div id="" class="letra"></div>
-            </div>
             
-            <!-- <div id="letra-certa">2</div>
-            <div id="posicao-errada">A</div>
-            <div id="letra-errada">B</div>
-            <div></div>
-            <div></div>
-
-            <div>3</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div>4</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div>5</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div>6</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div> -->
+            
+            
             
         </div>
-
-        <input type="text" id="userInput" minlneght="5" maxlength="5" required>
-
 
         <div class="teclado">
-            <table>
-                <tr>
-                    <td>Q</td>
-                    <td>W</td>
-                    <td>E</td>
-                    <td>R</td>
-                    <td>T</td>
-                    <td>Y</td>
-                    <td>U</td>
-                    <td>I</td>
-                    <td>O</td>
-                    <td>P</td>
-                </tr>
-                <tr id="segunda-linha">
-                    <td>A</td>
-                    <td>S</td>
-                    <td>D</td>
-                    <td>F</td>
-                    <td>G</td>
-                    <td>H</td>
-                    <td>J</td>
-                    <td>K</td>
-                    <td>L</td>
-                    <td ><</td>
-                </tr>
-                <tr>
-                    <td>Z</td>
-                    <td>X</td>
-                    <td>C</td>
-                    <td>V</td>
-                    <td>B</td>
-                    <td>N</td>
-                    <td>M</td>
-                    <td colspan="3">ENTER</td>
-                </tr>
-            </table>
+            <div class="row fileira1">
+                <div class="tecla">Q</div>
+                <div class="tecla">W</div>
+                <div class="tecla">E</div>
+                <div class="tecla">R</div>
+                <div class="tecla">T</div>
+                <div class="tecla">Y</div>
+                <div class="tecla">U</div>
+                <div class="tecla">I</div>
+                <div class="tecla">O</div>
+                <div class="tecla">P</div>
+            </div>
+            <div class="row fileira2">
+                <div class="tecla">A</div>
+                <div class="tecla">S</div>
+                <div class="tecla">D</div>
+                <div class="tecla">F</div>
+                <div class="tecla">G</div>
+                <div class="tecla">H</div>
+                <div class="tecla">J</div>
+                <div class="tecla">K</div>
+                <div class="tecla">L</div>
+                <div class="tecla" id="backspace"><</div>
+
+            </div>
+            <div class="row fileira3">
+                <div class="tecla">Z</div>
+                <div class="tecla">X</div>
+                <div class="tecla">C</div>
+                <div class="tecla">V</div>
+                <div class="tecla">B</div>
+                <div class="tecla">N</div>
+                <div class="tecla">M</div>
+                <div class="tecla" id="enter">ENTER</div>
+
+            </div>
+            
         </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./script.js"></script>
+    <!-- <script src="./main.js"></script> -->
 </body>
 </html>

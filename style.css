@@ -35,12 +35,19 @@ body {
     font-size: 1.5rem;
     color: white;
     margin: 0;
+    padding: 0;
 }
 h1{
-
+    background-color: rgb(143, 101, 101);
+    padding: 0 50px;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: -10px;
+    margin: 0 auto;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    margin-top: 4px;
 }
 a {
     text-decoration: none;
@@ -59,15 +66,12 @@ a:hover {
     display: none;
 }
 .container {
-    width: 50%;
-    margin: auto;
-    margin-top: -10px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
+
 /* .tentativas {
     display: grid;
     grid-template-columns: repeat(5, 52px);
@@ -84,75 +88,144 @@ a:hover {
     font-size: 2rem;
 } */
 
+/* tentativas */
+.linha {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: 52px;
+    gap : 4px;
+    margin-bottom: 4px;
+}
+.linha-selecionada div {
+    background-color: rgb(143, 101, 101);
+}
+/*#linha-selecionada div{*/
+/*    box-sizing: border-box;*/
+/*    background-color:rgb(143, 101, 101);*/
 
-.primeira-linha {
+/*}*/
+/* .primeira-linha {
     display: grid;
     grid-template-columns: repeat(5, 52px);
     grid-template-rows: 52px;
     grid-gap: 4px;
     margin-bottom: 4px;
-}
-.segunda-linha {
-    display: grid;
-    grid-template-columns: repeat(5, 52px);
-    grid-template-rows: 52px;
-    grid-gap: 4px;
-    margin-bottom: 4px;
+} */
 
-}
 .letra {
+
     background-color: rgb(122, 89, 89);
     border-radius: 5px;
+    border: 4px solid rgb(122, 89, 89);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     font-size: 2rem;
 }
-#linha-selecionada {
+
+#letra-selecionada {
     box-sizing: border-box;
-    background-color:rgb(143, 101, 101);
-    border: 4px solid rgb(122, 89, 89);
+    /* background-color:rgb(143, 101, 101);
+    border: 4px solid rgb(122, 89, 89); */
     border-bottom: 7px solid rgb(122, 89, 89);
 }
-#letra-certa {
-    background-color: rgb(48, 168, 132);
-    border-bottom: none;
+
+/* resultados do termo */
+#letra-certa  {
+    background-color:lightseagreen;
+    border: none;
 }
 #posicao-errada {
-    background-color: rgb(236, 187, 80);
+    background-color: lightsalmon;
+     border: none;
+
 }
 #letra-errada {
     background-color: rgb(66, 50, 50);
+     border: none;
+
 }
 
-/* .teclado {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: 50px;
-    grid-auto-flow: column;
-    grid-gap: 0.3rem;
-    
-} */
-/* .teclas {
+/* teclado */
+.teclado {
+    box-sizing: border-box;
+    width: 50%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    /* quando usa a propriedade flex-direction, inverte também o  efeito das propriedades align-items e justify-content */
+    /* align-items: center; */
+    /* justify-content: end;
+   ; */
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+}
+
+.row.fileira2 {
+    margin-left: 30px;
+}
+.row.fileira3 {
+    margin-left: 60px;
+}
+.tecla {
     background-color: rgb(85, 63, 63);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-} */
-
-.teclado {
-    box-sizing: border-box;
-    background-color: rgb(85, 63, 63);
-    margin-top: 30px;
-    font-size: 1.3rem;
-    font-weight: 900;
+    width: 58px;
+    height: 45px;
+    margin: 2px;
 }
-.teclado table, tr, td {
-    max-width: 100%;
-    border-collapse: collapse;
-    border: 4px solid rgb(143, 101, 101);
-    padding: 10px 20px;
+#enter {
+    box-sizing: border-box;
+    padding: 0 30px;
+    width: fit-content;
+    margin-left: auto;
+}
+#backspace {
+    box-sizing: border-box;
+    margin-left: auto;
+}
+
+@media (max-width: 1000px) {
+    .teclado {
+        width: 70%;
+    }
+    .tecla {
+        width: 3.5rem;
+        height: 45px;
+    }
+}
+@media (max-width: 700px) {
+    .teclado {
+        width: 100%;
+    }
+    .row.fileira1 {
+        margin-left: 0;
+    }
+    .row.fileira2 {
+        /* margin-left: 50px; */
+        margin-left: 0;
+    }
+    .row.fileira3 {
+        margin-left: 0;
+    }
+   
+}
+/*  */
+#userInput {
+    background-color: rgb(143, 101, 101);
+    position:absolute;
+    z-index: -1;
 }
