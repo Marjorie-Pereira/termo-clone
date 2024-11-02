@@ -1,34 +1,3 @@
-/* .tentativas {
-    margin: auto;
-    width: 50%;
-    background-color: grey;
-    text-align: center;
-}
-/* table, tr, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-} */
-
-/* .linhas {
-    margin: -12px auto;
-    width: 30px;
-    height: 30px;
-    background-color: black;
-}
-.colunas {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.colunas p {
-    background-color: black;
-    width: 50px;
-    height: 50px;
-    margin: 2px;
-    border-radius: 8px;
-} */
 body {
     background-color: rgb(143, 101, 101);
     font-family: 'Mulish', sans-serif, 'Lato', sans-serif;
@@ -58,12 +27,14 @@ a:hover {
 }
 #alerta {
     margin-top: 0;
+    margin-bottom: 6px;
     box-sizing: border-box;
     background-color: lightseagreen;
     font-size: 1.3rem;
     padding: 5px 20px;
     border-radius: 8px;
-    display: none;
+    /*para não deixar de ocupar seu devido espaço quando invisível*/
+    visibility: hidden;
 }
 .container {
     display: flex;
@@ -72,23 +43,10 @@ a:hover {
 
 }
 
-/* .tentativas {
-    display: grid;
-    grid-template-columns: repeat(5, 52px);
-    grid-template-rows: repeat(6, 52px);
-    grid-gap: 4px;
-}
-.tentativas div {
-    background-color: rgb(122, 89, 89);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 2rem;
-} */
-
 /* tentativas */
+.tentativas {
+    margin-top: 0px;
+}
 .linha {
     display: grid;
     grid-template-columns: repeat(5, 52px);
@@ -99,18 +57,6 @@ a:hover {
 .linha-selecionada div {
     background-color: rgb(143, 101, 101);
 }
-/*#linha-selecionada div{*/
-/*    box-sizing: border-box;*/
-/*    background-color:rgb(143, 101, 101);*/
-
-/*}*/
-/* .primeira-linha {
-    display: grid;
-    grid-template-columns: repeat(5, 52px);
-    grid-template-rows: 52px;
-    grid-gap: 4px;
-    margin-bottom: 4px;
-} */
 
 .letra {
 
@@ -163,20 +109,20 @@ a:hover {
     font-weight: 900;
 }
 
-
 .row {
     display: flex;
     flex-direction: row;
     justify-content: start;
-
 }
 
 .row.fileira2 {
     margin-left: 30px;
 }
+
 .row.fileira3 {
     margin-left: 60px;
 }
+
 .tecla {
     background-color: rgb(85, 63, 63);
     border-radius: 5px;
@@ -187,17 +133,20 @@ a:hover {
     height: 45px;
     margin: 2px;
 }
+
 #enter {
     box-sizing: border-box;
     padding: 0 30px;
     width: fit-content;
     margin-left: auto;
 }
+
 #backspace {
     box-sizing: border-box;
     margin-left: auto;
 }
 
+/*responsividade*/
 @media (max-width: 1000px) {
     .teclado {
         width: 70%;
@@ -223,7 +172,8 @@ a:hover {
     }
    
 }
-/*  */
+
+/* utilitarios */
 #userInput {
     background-color: rgb(143, 101, 101);
     position:absolute;

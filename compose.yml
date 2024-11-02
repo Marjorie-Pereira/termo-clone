@@ -1,0 +1,14 @@
+
+services:
+  apache:
+    image: httpd:alpine
+    container_name: 'TermoApp'
+    ports:
+      - "1988:80"
+    volumes:
+      - ./htdocs:/usr/local/apache2/htdocs
+    networks:
+      - padrao
+networks:
+  padrao:
+    driver: bridge
