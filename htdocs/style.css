@@ -25,16 +25,41 @@ a {
 a:hover {
     color: rgb(43, 39, 39);
 }
+
+#output {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    /*para não deixar de ocupar seu devido espaço quando invisível*/
+    visibility: hidden;
+}
+
 #alerta {
     margin-top: 0;
     margin-bottom: 6px;
     box-sizing: border-box;
-    background-color: lightseagreen;
+    background-color: royalblue;
     font-size: 1.3rem;
     padding: 5px 20px;
     border-radius: 8px;
-    /*para não deixar de ocupar seu devido espaço quando invisível*/
-    visibility: hidden;
+    
+}
+#reiniciar {
+    margin-top: 0;
+    margin-bottom: .5em;
+    background-color: royalblue;
+    color:white;
+    border-radius: 8px;
+    border: none;
+    padding: .8em;
+    display: none;
+}
+#reiniciar:hover {
+    background-color: rgb(96, 129, 228);
+    cursor: pointer;
+}
+i{
+    font-size: 1rem;
 }
 .container {
     display: flex;
@@ -79,7 +104,7 @@ a:hover {
 
 /* resultados do termo */
 #letra-certa  {
-    background-color:lightseagreen;
+    background-color:royalblue;
     border: none;
 }
 #posicao-errada {

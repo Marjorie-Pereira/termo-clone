@@ -2,7 +2,9 @@ const termo = 'TERMO'
 const input = document.getElementById('userInput');
 const linhas = document.getElementById('tentativas');
 let linhaSelecionada = linhas.firstElementChild;
+const output = document.getElementById('output');
 const alerta = document.getElementById('alerta');
+const jogarDenovo = alerta.nextElementSibling;
 let tentativas = 6;
 const dis = document.createAttribute("disabled");
 
@@ -37,8 +39,10 @@ function verificarInput() {
         }
     }
     if(palpite === termo) {
-        alerta.style.visibility = 'visible';
+        output.style.visibility = 'visible';
         alerta.innerHTML = 'Parabéns você acertou!';
+        alerta.nextElementSibling.style.display = 'block';
+
         // impede o usuário de continuar jogando ao definir atributo do input como disabled
         input.setAttributeNode(dis);
         // isTermoFound = true;
@@ -61,7 +65,7 @@ function verificarInput() {
 input.addEventListener('keypress', (e) => {
     if(e.key === 'Enter' ) {
         if(e.target.value.length < 5) {
-            alerta.style.visibility = 'visible';
+            output.style.visibility = 'visible';
             return;
         }
         tentativas -= 1;
@@ -77,8 +81,9 @@ input.addEventListener('keypress', (e) => {
             //
             // }
         if(tentativas === 0 && !verificarInput()) {
-            alerta.style.visibility = 'visible';
+            output.style.visibility = 'visible';
             alerta.innerHTML = "As tentativas acabaram :(";
+            alerta.nextElementSibling.style.display = 'block';
             input.setAttributeNode(dis);
         }
     }
@@ -91,7 +96,7 @@ input.addEventListener('keypress', (e) => {
 let palpite = '';
 // exibindo input na tela
 input.addEventListener('input', (e) => {
-    alerta.style.visibility = 'hidden';
+    output.style.visibility = 'hidden';
     
     // apagando input
     if(e.data === null) {
@@ -126,3 +131,6 @@ input.addEventListener('input', (e) => {
     } 
 })
 
+jogarDenovo.addEventListener('click', () => {
+    window.location.reload();
+})

@@ -7,13 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
     <title>termoTeste</title>
 </head>
 <body>
     <div class="container">
         <h1>GUESS IT</h1>
         <p>Baseado no jogo <a href="https://term.ooo/sobre/" target="_blank">TERMO</a> para fins de estudo.</p>
-        <p id="alerta">A palavra deve ter 5 letras!</p>
+        <div id="output">
+            <p id="alerta">A palavra deve ter 5 letras!</p>
+            <button id="reiniciar"><i class="bi bi-arrow-clockwise"></i>
+            </button>
+        </div>
+        
         <input type="text" id="userInput" minlength="5" maxlength="5" required  autocomplete="off">
 
         <div class="tentativas" id="tentativas">
