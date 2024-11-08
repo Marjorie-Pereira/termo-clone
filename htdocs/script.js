@@ -11,7 +11,7 @@ input.focus({ preventScroll: true });
 
 linhaSelecionada.addEventListener('click', (e) => {
     input.focus({ preventScroll: true });
-    console.log(palpite);
+    console.log(e.target);
 
 })
 
@@ -81,12 +81,10 @@ input.addEventListener('keypress', (e) => {
             alerta.innerHTML = "As tentativas acabaram :(";
             input.setAttributeNode(dis);
         }
-
-
-
-
-        
-
+    }
+    // impede o navegador de aceitar espaços como input
+    else if(e.key === ' ') {
+        e.preventDefault();
     }
 })
 
@@ -94,14 +92,9 @@ let palpite = '';
 // exibindo input na tela
 input.addEventListener('input', (e) => {
     alerta.style.visibility = 'hidden';
-
-
-    if(e.data === ' ') {
-        console.log('blank');
-        return false;
-    }
+    
     // apagando input
-    else if(e.data === null) {
+    if(e.data === null) {
          palpite = palpite.slice(0, -1);
         for(let i = 4; i >= 0; i--) {
             if(linhaSelecionada.children[i].innerHTML) {
@@ -130,6 +123,6 @@ input.addEventListener('input', (e) => {
             }
             
         }
-    }
+    } 
 })
 
